@@ -1,4 +1,4 @@
-# SLAS NextGen Admin Webapp
+#Admin Webapp
 
 Based off [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) with the following modifications:
 
