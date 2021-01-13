@@ -1,0 +1,21 @@
+/*
+ *
+ * {{ properCase name }} reducer
+ *
+ */
+
+import { fromJS } from 'immutable';
+import * as constants from './constants';
+
+export const initialState = fromJS({});
+
+function {{ camelCase name }}Reducer(state = initialState, action) {
+  switch (action.type) {
+    case constants.DEFAULT_ACTION:
+      return state;
+    default:
+      return state;
+  }
+}
+
+export default {{ camelCase name }}Reducer;

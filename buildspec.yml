@@ -1,0 +1,33 @@
+version: 0.2
+
+env:
+  parameter-store:
+    build_ssh_key: "build_ssh_key"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 8
+
+  pre_build:
+    commands:
+      - echo Configuring GitHub Deploy Keys...
+      - mkdir -p ~/.ssh
+      - echo "$build_ssh_key" > ~/.ssh/id_rsa
+      - chmod 600 ~/.ssh/id_rsa
+      - ssh-keygen -F github.com || ssh-keyscan github.com >>~/.ssh/known_hosts
+      - git config --global url."git@github.com:".insteadOf "https://github.com/"
+      - npm ci
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build
+
+cache:
+  paths:
+    - node_modules/**/*

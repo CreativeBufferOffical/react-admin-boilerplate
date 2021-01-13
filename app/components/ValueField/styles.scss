@@ -1,0 +1,10 @@
+.value {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  .default-loading-spinner {
+    margin-right: 10px;
+  }
+}

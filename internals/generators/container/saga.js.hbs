@@ -1,0 +1,11 @@
+import { all, takeLatest } from 'redux-saga/effects';
+import * as constants from './constants';
+
+// Individual exports for testing
+export default function* {{ camelCase name }}Saga() {
+  yield all([takeLatest(constants.DEFAULT_ACTION, actionSaga)]);
+}
+
+export function* actionSaga(action) {
+  console.log(action);
+}

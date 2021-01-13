@@ -1,0 +1,20 @@
+/*
+ * AppConstants
+ */
+
+export const APP_INIT_LOAD = 'app/INIT_LOAD';
+
+export const APP_INIT_LOAD_SUCCESS = 'app/APP_INIT_LOAD_SUCCESS';
+
+export const USER_LOAD_SUCCESS = 'app/USER_LOAD_SUCCESS';
+
+export const USER_LOAD_FAIL = 'app/USER_LOAD_FAIL';
+
+export const ROLES_LOAD_SUCCESS = 'app/ROLES_LOAD_SUCCESS';
+
+export const ROLES_LOAD_FAIL = 'app/ROLES_LOAD_FAIL';
+
+export const PERMISSION_TOKENS_LOAD_SUCCESS =
+  'app/PERMISSION_TOKENS_LOAD_SUCCESS';
+
+export const PERMISSION_TOKENS_LOAD_FAIL = 'app/PERMISSION_TOKENS_LOAD_FAIL';
